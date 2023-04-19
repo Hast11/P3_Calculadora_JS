@@ -54,6 +54,13 @@
             vaciarInput();
         }
 
+        const eq =()=>{
+            acumula(getValorEntrada());
+            operador=="=";
+            vaciarInput();
+            setValorEntrada(acumulador);
+        }
+
         const onload =()=>{
             document.getElementById("cuadrado").addEventListener("click",sq);
             document.getElementById("factorial").addEventListener("click",fact);
@@ -77,6 +84,7 @@
             <h3 id="info" class="cabecera" title="binarias">Operaciones binarias</h3>
             <div class="operaciones">
                 <button id="suma"> + </button>
+                <button id="igual"> = </button>
             </div>
         </body>
 </html>
