@@ -38,6 +38,22 @@
             setValorEntrada(resultado);
         }
 
+        let acumulador =0;//Base del acumulador
+        let operador ="";
+
+        const acumula = n=>{
+            switch(operador){
+                case "": acumulador=n; break;
+                case"+":acumulador +=n; break;
+            }
+        }
+
+        const add=()=>{
+            acumula(getValorEntrada());
+            operador = "+";
+            vaciarInput();
+        }
+
         const onload =()=>{
             document.getElementById("cuadrado").addEventListener("click",sq);
             document.getElementById("factorial").addEventListener("click",fact);
@@ -52,10 +68,15 @@
             <div id="inputTexto">
                 <input type="text" id="pantalla"></input> 
             </div>   
+            <h3 class="cabecera" title="Unitarias">Operaciones unitarias</h3>
             <div class="operaciones">    
                 <button id="cuadrado">x<sup>2</sup></button>
                 <button id="factorial">x!</button>
                 <button id="raiz">&#8730 x</button>
             </div> 
+            <h3 id="info" class="cabecera" title="binarias">Operaciones binarias</h3>
+            <div class="operaciones">
+                <button id="suma"> + </button>
+            </div>
         </body>
 </html>
