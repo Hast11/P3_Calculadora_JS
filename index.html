@@ -4,6 +4,15 @@
         <meta charset="utf-8">
     </head>
     <script type="text/javascript">
+        
+        const ValorEntrada=()=>{
+            return Number(document.getElementById("pantalla").value)
+        }
+
+        const setValorEntrada=(valor)=>{
+            document.getElementById("pantalla").value=valor;
+        }
+
         const sq = () =>{
             let ValorEntrada = getValorEntrada();
             let resultado = ValorEntrada*ValorEntrada;
