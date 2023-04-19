@@ -4,6 +4,19 @@
         <meta charset="utf-8">
     </head>
     <script type="text/javascript">
+
+        let acumulador =0;
+        let operador ="";
+
+        const acumula = n=>{//Acumulador
+            switch(operador){
+                case "":acumulador =n; break;
+                case"+":acumulador +=n; break;
+                case"-":acumulador -=n; break;
+                case"*":acumulador *=n; break;
+                case"/":acumulador /=n; break;
+            }
+        }
         
         const getValorEntrada=()=>{ //Coger valor de pantalla
             return Number(document.getElementById("pantalla").value)
@@ -38,51 +51,38 @@
             setValorEntrada(resultado);
         }
 
-        let acumulador =0;//Base del acumulador
-        let operador ="";
-
-        const acumula = n=>{
-            switch(operador){
-                case "":acumulador =n; break;
-                case"+":acumulador +=n; break;
-                case"-":acumulador -=n; break;
-                case"*":acumulador *=n; break;
-                case"/":acumulador /=n; break;
-            }
-        }
-
-        const add=()=>{
+        const add=()=>{//Funcion suma
             acumula(getValorEntrada());
             operador = "+";
             vaciarInput();
         }
 
-        const sub=()=>{
+        const sub=()=>{//funcion resta
             acumula(getValorEntrada());
             operador=="-";
             vaciarInput();
         }
 
-        const mul=()=>{
+        const mul=()=>{//funcion multiplicacion
             acumula(getValorEntrada());
             operador=="*";
             vaciarInput();
         }
 
-        const div=()=>{
+        const div=()=>{//Funcion division
             acumula(getValorEntrada());
             operador=="/";
             vaciarInput();
         }
 
-        const eq =()=>{
+        const eq =()=>{//funcion igual
             acumula(getValorEntrada());
             operador=="=";
             vaciarInput();
             setValorEntrada(acumulador);
         }
 
-        const onload =()=>{
+        const onload =()=>{//En carga
             document.getElementById("cuadrado").addEventListener("click",sq);
             document.getElementById("factorial").addEventListener("click",fact);
             document.getElementById("raiz").addEventListener("click",sqr);
