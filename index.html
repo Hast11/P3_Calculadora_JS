@@ -7,8 +7,26 @@
 
         let acumulador =0;
         let operador ="";
+
         const rellenar_info=()=>{
-            
+            const resultado = getValorEntrada();
+            let mensaje = "";
+            if(Number.isNan(resultado)){
+                mensaje = "Error";
+            }
+            else {
+                    if (resultado < 100) {
+                        mensaje = "Info: El resultado es menor que 100";
+                    }
+                    else if (resultado <= 200) {
+                        mensaje = "Info: El resultado está entre 100 y 200";
+                    }
+                    else {
+                        mensaje = "Info: El resultado es superior a 200";
+                    }
+                }
+                document.getElementById("info").innerHTML = mensaje;
+
         }
 
         const acumula = n=>{//Acumulador
