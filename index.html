@@ -57,13 +57,6 @@
             vaciarInput();
         }
 
-        const eq =()=>{
-            acumula(getValorEntrada());
-            operador=="=";
-            vaciarInput();
-            setValorEntrada(acumulador);
-        }
-
         const sub=()=>{
             acumula(getValorEntrada());
             operador=="-";
@@ -80,6 +73,13 @@
             acumula(getValorEntrada());
             operador=="/";
             vaciarInput();
+        }
+
+        const eq =()=>{
+            acumula(getValorEntrada());
+            operador=="=";
+            vaciarInput();
+            setValorEntrada(acumulador);
         }
 
         const onload =()=>{
