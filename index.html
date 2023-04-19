@@ -5,21 +5,21 @@
     </head>
     <script type="text/javascript">
         
-        const ValorEntrada=()=>{
+        const getValorEntrada=()=>{ //Coger valor de pantalla
             return Number(document.getElementById("pantalla").value)
         }
 
-        const setValorEntrada=(valor)=>{
+        const setValorEntrada=(valor)=>{//Cambiar valor de pantalla
             document.getElementById("pantalla").value=valor;
         }
 
-        const sq = () =>{
+        const sq = () =>{ //Funcion cuadrado
             let ValorEntrada = getValorEntrada();
             let resultado = ValorEntrada*ValorEntrada;
             setValorEntrada(resultado);
         }
 
-        const fact = () =>{
+        const fact = () =>{//Funcion factorial
             let ValorEntrada = getValorEntrada();
             let resultado = 1;
             for (ValorEntrada; ValorEntrada>1;ValorEntrada--){
@@ -28,7 +28,7 @@
             setValorEntrada(resultado);
         }
 
-        const sqr = () =>{
+        const sqr = () =>{//Funcion raiz cuadrada
             let ValorEntrada = getValorEntrada();
             let resultado = Math.sqrt(ValorEntrada);
             setValorEntrada(resultado);
