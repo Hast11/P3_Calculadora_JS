@@ -65,36 +65,42 @@
                 resultado *= ValorEntrada;
             }
             setValorEntrada(resultado);
+            rellenar_info();
         }
 
         const sqr = () =>{//Funcion raiz cuadrada
             let ValorEntrada = getValorEntrada();
             let resultado = Math.sqrt(ValorEntrada);
             setValorEntrada(resultado);
+            rellenar_info();
         }
 
         const add=()=>{//Funcion suma
             acumula(getValorEntrada());
             operador = "+";
             vaciarInput();
+            rellenar_info();
         }
 
         const sub=()=>{//funcion resta
             acumula(getValorEntrada());
             operador=="-";
             vaciarInput();
+            rellenar_info();
         }
 
         const mul=()=>{//funcion multiplicacion
             acumula(getValorEntrada());
             operador=="*";
             vaciarInput();
+            rellenar_info();
         }
 
         const div=()=>{//Funcion division
             acumula(getValorEntrada());
             operador=="/";
             vaciarInput();
+            rellenar_info();
         }
 
         const eq =()=>{//funcion igual
@@ -102,6 +108,7 @@
             operador = "=";
             vaciarInput();
             setValorEntrada(acumulador);
+            rellenar_info();
         }
 
         const onload =()=>{//En carga
