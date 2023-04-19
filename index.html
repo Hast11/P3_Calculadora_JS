@@ -61,12 +61,20 @@
             setValorEntrada(acumulador);
         }
 
+        const sub=()=>{
+            acumula(getValorEntrada());
+            operador=="-";
+            vaciarInput();
+            setValorEntrada(acumulador);
+        }
+
         const onload =()=>{
             document.getElementById("cuadrado").addEventListener("click",sq);
             document.getElementById("factorial").addEventListener("click",fact);
             document.getElementById("raiz").addEventListener("click",sqr);
             document.getElementById("suma").addEventListener("click",add);
             document.getElementById("igual").addEventListener("click",eq);
+            document.getElementById("resta").addEventListener("click",sub);
         }
 
         window.onload = onload;
@@ -87,6 +95,7 @@
             <div class="operaciones">
                 <button id="suma"> + </button>
                 <button id="igual"> = </button>
+                <button id="resta"> - </button>
             </div>
         </body>
 </html>
