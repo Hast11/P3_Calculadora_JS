@@ -5,6 +5,14 @@
     </head>
     <script type="text/javascript">
 
+        const validNumber = () => {
+            if ( Number.isNaN(getInputValue()) ) {
+                setInputValue("Error");
+                return false;
+            }
+            return true;
+        }
+
         let acumulador =0;
         let operador ="";
 
@@ -52,13 +60,18 @@
         }
 
         const sq = () =>{ //Funcion cuadrado
+            if(!validNumber()) {
+                    return;}
             let ValorEntrada = getValorEntrada();
             let resultado = ValorEntrada*ValorEntrada;
             setValorEntrada(resultado);
             rellenar_info();
+            
         }
 
         const fact = () =>{//Funcion factorial
+            if(!validNumber()) {
+                    return;}
             let ValorEntrada = getValorEntrada();
             let resultado = 1;
             for (ValorEntrada; ValorEntrada>1;ValorEntrada--){
@@ -69,6 +82,8 @@
         }
 
         const sqr = () =>{//Funcion raiz cuadrada
+            if(!validNumber()) {
+                    return;}
             let ValorEntrada = getValorEntrada();
             let resultado = Math.sqrt(ValorEntrada);
             setValorEntrada(resultado);
@@ -76,6 +91,8 @@
         }
 
         const add=()=>{//Funcion suma
+            if(!validNumber()) {
+                    return;}
             acumula(getValorEntrada());
             operador = "+";
             vaciarInput();
@@ -83,6 +100,8 @@
         }
 
         const sub=()=>{//funcion resta
+            if(!validNumber()) {
+                    return;}
             acumula(getValorEntrada());
             operador=="-";
             vaciarInput();
@@ -90,6 +109,8 @@
         }
 
         const mul=()=>{//funcion multiplicacion
+            if(!validNumber()) {
+                    return;}
             acumula(getValorEntrada());
             operador=="*";
             vaciarInput();
@@ -97,6 +118,8 @@
         }
 
         const div=()=>{//Funcion division
+            if(!validNumber()) {
+                    return;}
             acumula(getValorEntrada());
             operador=="/";
             vaciarInput();
@@ -104,6 +127,8 @@
         }
 
         const eq =()=>{//funcion igual
+            if(!validNumber()) {
+                    return;}
             acumula(getValorEntrada());
             operador = "=";
             vaciarInput();
