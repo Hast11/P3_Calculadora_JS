@@ -3,13 +3,21 @@
         <meta charset="utf-8">
     </head>
     <script>
+        const sq = () =>{
+            let ValorEntrada = getValorEntrada();
+            let resultado = ValorEntrada*ValorEntrada;
+            setValorEntrada(resultado);
+        }
+
         const fact = () =>{
             let ValorEntrada = getValorEntrada();
-            let final = 1;
+            let resultado = 1;
             for (let i = ValorEntrada; i >1;i--){
-                final *= i;
+                resultado *= i;
             }
+            setValorEntrada(resultado);
         }
+
     </script>
         <body>
             <h2 class="cabecera">
