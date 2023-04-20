@@ -20,9 +20,9 @@
             }
 
             const validar = () => {
-                if ( Number.isNaN(getValorEntrada) ) {
-                    acumulador=0;
-                    operador="";
+                if ( Number.isNaN(getInputValue()) ) {
+                    acumulador = 0;
+                    operador = "";
                     setValorEntrada("Error");
                     return false;
                 }
