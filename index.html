@@ -114,8 +114,8 @@
         const sub=()=>{//funcion resta
             if(!validar()) {
                     return;}
-            operador=="-";
             acumula(getValorEntrada());
+            operador=="-";
             vaciarInput();
             rellenar_info();
         }
@@ -123,8 +123,8 @@
         const mul=()=>{//funcion multiplicacion
             if(!validar()) {
                     return;}
-            operador=="*";
             acumula(getValorEntrada());
+            operador=="*";
             vaciarInput();
             rellenar_info();
         }
@@ -132,8 +132,8 @@
         const div=()=>{//Funcion division
             if(!validar()) {
                     return;}
-            operador=="/";
             acumula(getValorEntrada());
+            operador=="/";
             vaciarInput();
             rellenar_info();
         }
@@ -141,9 +141,9 @@
         const eq =()=>{//funcion igual
             if(!validar()) {
                     return;}
-            operador = "";
             acumula(getValorEntrada());
-            vaciarInput();
+            operador = "";
+            // vaciarInput();
             setValorEntrada(acumulador);
             rellenar_info();
         }
