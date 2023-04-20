@@ -21,6 +21,8 @@
         const validar = () => {
             if ( Number.isNaN(getValorEntrada) ) {
                 setValorEntrada("Error");
+                acumulador=0;
+                operador="";
                 return false;
             }
             return true;
