@@ -39,7 +39,7 @@
             document.getElementById("valoresAcumulador").innerHTML = listaAcumulador;
         } */
 
-        const rellenar_info=()=>{
+        const rellenar_info = () => {
             const resultado = getValorEntrada();
             let mensaje = "";
             if(Number.isNan(resultado)){
@@ -95,9 +95,10 @@
         const sqr = () =>{//Funcion raiz cuadrada
             if(!validar()) {
                     return;}
-            let ValorEntrada = getValorEntrada();
-            let resultado = Math.sqrt(ValorEntrada);
-            setValorEntrada(resultado);
+            // let ValorEntrada = getValorEntrada();
+            // let resultado = Math.sqrt(ValorEntrada);
+            // setValorEntrada(resultado);
+            setValorEntrada(Math.sqrt(getValorEntrada));
             rellenar_info();
         }
 
