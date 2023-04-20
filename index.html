@@ -5,8 +5,20 @@
     </head>
     <script type="text/javascript">
 
+        const getValorEntrada=()=>{ //Coger valor de pantalla
+            return Number(document.getElementById("pantalla").value)
+        }
+
+        const setValorEntrada=(valor)=>{//Cambiar valor de pantalla
+            document.getElementById("pantalla").value=valor;
+        }
+
+        const vaciarInput=()=>{//Vaciar Input
+            document.getElementById("pantalla").value="";
+        }
+
         const validNumber = () => {
-            if ( Number.isNaN(getInputValue()) ) {
+            if ( Number.isNaN(getValorEntrada) ) {
                 setInputValue("Error");
                 return false;
             }
@@ -51,18 +63,6 @@
                 case"*":acumulador *=n; break; addAcumulator(n); addAcumulator('*');
                 case"/":acumulador /=n; break; addAcumulator(n); addAcumulator('/');
             }
-        }
-        
-        const getValorEntrada=()=>{ //Coger valor de pantalla
-            return Number(document.getElementById("pantalla").value)
-        }
-
-        const setValorEntrada=(valor)=>{//Cambiar valor de pantalla
-            document.getElementById("pantalla").value=valor;
-        }
-
-        const vaciarInput=()=>{//Vaciar Input
-            document.getElementById("pantalla").value="";
         }
 
         const sq = () =>{ //Funcion cuadrado
