@@ -5,9 +5,12 @@
     </head>
     <script type="text/javascript">
 
+        let acumulador =0;
+        let operador ="";
+
         const getValorEntrada=()=>{ //Coger valor de pantalla
-//            return Number(document.getElementById("pantalla").value);
-            return document.getElementById("pantalla").value;
+           return Number(document.getElementById("pantalla").value);
+//            return document.getElementById("pantalla").value;
         }
 
         const setValorEntrada=(valor)=>{//Cambiar valor de pantalla
@@ -28,8 +31,7 @@
             return true;
         }
 
-        let acumulador =0;
-        let operador ="";
+
 /*         let listaAcumulador = "<ul>"
 
         const addAcumulator = (n) => {
