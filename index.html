@@ -20,7 +20,7 @@
             }
 
             const validar = () => {
-                if ( Number.isNaN(getInputValue()) ) {
+                if ( Number.isNaN(getValorEntrada()) ) {
                     acumulador = 0;
                     operador = "";
                     setValorEntrada("Error");
@@ -30,7 +30,7 @@
             }
 
             const rellenar_info = () => {
-                const resultadoInput = getInputValue();
+                const resultadoInput = getValorEntrada();
                 let mensaje = "";
 
                 if (Number.isNaN(resultadoInput)) {
