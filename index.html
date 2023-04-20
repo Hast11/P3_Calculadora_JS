@@ -18,9 +18,9 @@
             document.getElementById("pantalla").value="";
         }
 
-        const validNumber = () => {
+        const validar = () => {
             if ( Number.isNaN(getValorEntrada) ) {
-                setInputValue("Error");
+                setValorEntrada("Error");
                 return false;
             }
             return true;
@@ -52,7 +52,7 @@
                         mensaje = "Info: El resultado es superior a 200";
                     }
                 }
-                document.getElementById("info").innerHTML = mensaje;
+            document.getElementById("info").innerHTML = mensaje;
 
         }
 
@@ -67,7 +67,7 @@
         }
 
         const sq = () =>{ //Funcion cuadrado
-            if(!validNumber()) {
+            if(!validar()) {
                     return;}
             let ValorEntrada = getValorEntrada();
             let resultado = ValorEntrada*ValorEntrada;
@@ -77,7 +77,7 @@
         }
 
         const fact = () =>{//Funcion factorial
-            if(!validNumber()) {
+            if(!validar()) {
                     return;}
             let ValorEntrada = getValorEntrada();
             let resultado = 1;
@@ -89,7 +89,7 @@
         }
 
         const sqr = () =>{//Funcion raiz cuadrada
-            if(!validNumber()) {
+            if(!validar()) {
                     return;}
             let ValorEntrada = getValorEntrada();
             let resultado = Math.sqrt(ValorEntrada);
@@ -98,7 +98,7 @@
         }
 
         const add=()=>{//Funcion suma
-            if(!validNumber()) {
+            if(!validar()) {
                     return;}
             operador = "+";
             acumula(getValorEntrada());
@@ -107,7 +107,7 @@
         }
 
         const sub=()=>{//funcion resta
-            if(!validNumber()) {
+            if(!validar()) {
                     return;}
             operador=="-";
             acumula(getValorEntrada());
@@ -116,7 +116,7 @@
         }
 
         const mul=()=>{//funcion multiplicacion
-            if(!validNumber()) {
+            if(!validar()) {
                     return;}
             operador=="*";
             acumula(getValorEntrada());
@@ -125,7 +125,7 @@
         }
 
         const div=()=>{//Funcion division
-            if(!validNumber()) {
+            if(!validar()) {
                     return;}
             operador=="/";
             acumula(getValorEntrada());
@@ -134,7 +134,7 @@
         }
 
         const eq =()=>{//funcion igual
-            if(!validNumber()) {
+            if(!validar()) {
                     return;}
             operador = "";
             acumula(getValorEntrada());
