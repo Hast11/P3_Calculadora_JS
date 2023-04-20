@@ -95,10 +95,10 @@
         const sqr = () =>{//Funcion raiz cuadrada
             if(!validar()) {
                     return;}
-            // let ValorEntrada = getValorEntrada();
-            // let resultado = Math.sqrt(ValorEntrada);
-            // setValorEntrada(resultado);
-            setValorEntrada(Math.sqrt(getValorEntrada));
+            let ValorEntrada = getValorEntrada();
+            let resultado = Math.sqrt(ValorEntrada);
+            setValorEntrada(resultado);
+            // setValorEntrada(Math.sqrt(getValorEntrada));
             rellenar_info();
         }
 
